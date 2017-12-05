@@ -62,7 +62,7 @@ function getSpecificDate($date, $seasonName){
                 $homeScore = $gameScore["homeScore"];
                 $awayScore = $gameScore["awayScore"];
                 echo "<div class=\"col-sm-4\">
-                <div class=\"card\">
+                <div class=\"card my-2\">
                   <div class=\"card-body\">
                     <h4 class=\"card-title\">$homeTeam @ $awayTeam </h4>
                     <h6 class=\"card-subtitle mb-2 text-muted\">$prettyDate</h6>
@@ -78,7 +78,7 @@ function getSpecificDate($date, $seasonName){
                 $time = $match['time'];
                 
                 echo "<div class=\"col-sm-4\">
-                <div class=\"card\">
+                <div class=\"card my-2\">
                   <div class=\"card-body\">
                     <h4 class=\"card-title\">$homeTeam @ $awayTeam </h4>
                     <h6 class=\"card-subtitle mb-2 text-muted\">$prettyDate</h6>

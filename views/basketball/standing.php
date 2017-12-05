@@ -71,7 +71,7 @@ function getByConference(){
                   <th>#</th>
                   <th>Team</th>
                   <th>Game Played</th>
-                  <th>Victory</th>
+                  <th>Wins</th>
                   <th>Lost</th>
                 </tr>
               </thead>
@@ -142,7 +142,7 @@ function getOverAll(){
 				      <th>#</th>
 				      <th>Team</th>
 				      <th>Game Played</th>
-				      <th>Victory</th>
+				      <th>Wins</th>
 				      <th>Lost</th>
 				    </tr>
 				  </thead>

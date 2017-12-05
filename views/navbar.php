@@ -61,7 +61,14 @@
     </div>
     <?php if (user_connected()) { ?>
       <div class="text-white"><?php echo $_SESSION['user']; ?></div>
-      <a href="<?=BASEURL?>index.php/user/show_state">settings</a>
-      <a href="<?=BASEURL?>index.php/user/signout">signout</a>
+
+      <a href="<?=BASEURL?>index.php/user/show_state" class="btn btn-primary mx-2" aria-label="Left Align">
+       <span class="fa fa-cog fa-lg" aria-hidden="true"></span>
+       Settings
+      </a>
+      <a href="<?=BASEURL?>index.php/user/signout" class="btn btn-secondary mx-2" aria-label="Left Align">
+       <span class="fa fa-sign-out fa-lg" aria-hidden="true"></span>
+       Logout
+      </a>
     <?php } ?>
   </nav>
