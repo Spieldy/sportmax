@@ -44,12 +44,14 @@ function getSpecificDate($date, $seasonName){
         //echo "\nResponse HTTP Body : " . $resp;
 
         $prettyDate = date("l, jS F Y", $date);
-
         $resp = json_decode($resp, true);
         //echo $resp;
+
+        if(array_key_exists('scoreboard',$resp) && array_key_exists('gameScore', $resp['scoreboard'])){
         $resp = $resp['scoreboard'];
         $resp = $resp['gameScore'];
         
+
         echo "<h6>$prettyDate</h6>
                 <table class=\"table table-striped\">
                     <thead>
@@ -77,12 +79,13 @@ function getSpecificDate($date, $seasonName){
                         </tr>";
             }
 
+        }
             
-
+            echo "  </tbody>
+             </table>";
         }
         
-        echo "  </tbody>
-             </table>";
+
 
     }
 }

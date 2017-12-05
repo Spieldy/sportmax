@@ -47,6 +47,7 @@ function getSpecificDate($date, $seasonName){
 
         $resp = json_decode($resp, true);
         //echo $resp;
+        if(array_key_exists('scoreboard',$resp) && array_key_exists('gameScore', $resp['scoreboard'])){
         $resp = $resp['scoreboard'];
         $resp = $resp['gameScore'];
         
@@ -83,6 +84,8 @@ function getSpecificDate($date, $seasonName){
         
         echo "  </tbody>
              </table>";
+
+        }
 
     }
 }
