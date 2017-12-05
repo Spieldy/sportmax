@@ -86,7 +86,7 @@ function getEquipe($team){
             
             $urlwikipedia = $resp2["entities"]["$wikidataID"]["sitelinks"]["frwiki"]["url"];
             
-            echo  "URL wikipedia : " . $urlwikipedia  . "<br>";
+            //echo  "URL wikipedia : " . $urlwikipedia  . "<br>";
         }
         
             $urlImage = "https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=". urlencode($wikiLabel) . "&pilicense=any";

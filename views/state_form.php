@@ -11,9 +11,8 @@ if (user_connected()) { ?>
 		    <label for="exampleSelect1">What is your favourite sport</label>
 		    <select class="form-control" name="sport_state" id="sport_state">
 		      <option value="1">NHL</option>
-		      <option value="2">MLS</option>
-		      <option value="3">NFL</option>
-		      <option value="4">NBA</option>
+		      <option value="2">NFL</option>
+		      <option value="3">NBA</option>
 		    </select>
 		  </div>
 		  <div class="form-group">

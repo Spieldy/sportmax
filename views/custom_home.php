@@ -1,9 +1,8 @@
 <?php
 $sports = array(
 	'1' => "hockey",
-	'2' => "soccer",
-	'3' => "football",
-	'4' => "basketball"
+	'2' => "football",
+	'3' => "basketball"
  );
 
 $displays = array(
