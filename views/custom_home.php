@@ -15,5 +15,6 @@ $displays = array(
 
 $state_table = str_split($state);
 
+include 'views/'.$sports[$state_table[0]].'/title.php';
 include 'views/'.$sports[$state_table[0]].'/'.$displays[$state_table[1]].'.php';
 ?>

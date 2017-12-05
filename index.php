@@ -16,7 +16,7 @@
 
   date_default_timezone_set('Europe/Paris');
 
-  define('BASEURL', 'http://localhost/sport-max/');
+  define('BASEURL', 'http://localhost/sportmax/');
 
   ob_start();
 

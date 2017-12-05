@@ -1,119 +1,72 @@
 <div class="row">
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Tampa Bay @ Canadians</h4>
-        <h6 class="card-subtitle mb-2 text-muted">Thursday, 30th November</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Tampa Bay: 12-3</li>
-          <li class="list-group-item">Canadians: 4-11</li>
-          <li class="list-group-item"><a href="<?=BASEURL?>index.php/hockey/classment" class="card-link">Classment</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Tampa Bay @ Canadians</h4>
-        <h6 class="card-subtitle mb-2 text-muted">Thursday, 30th November</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Tampa Bay: 12-3</li>
-          <li class="list-group-item">Canadians: 4-11</li>
-          <li class="list-group-item"><a href="<?=BASEURL?>index.php/hockey/classment" class="card-link">Classment</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Tampa Bay @ Canadians</h4>
-        <h6 class="card-subtitle mb-2 text-muted">Thursday, 30th November</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Tampa Bay: 12-3</li>
-          <li class="list-group-item">Canadians: 4-11</li>
-          <li class="list-group-item"><a href="<?=BASEURL?>index.php/hockey/classment" class="card-link">Classment</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Tampa Bay @ Canadians</h4>
-        <h6 class="card-subtitle mb-2 text-muted">Thursday, 30th November</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Tampa Bay: 12-3</li>
-          <li class="list-group-item">Canadians: 4-11</li>
-          <li class="list-group-item"><a href="<?=BASEURL?>index.php/hockey/classment" class="card-link">Classment</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Tampa Bay @ Canadians</h4>
-        <h6 class="card-subtitle mb-2 text-muted">Thursday, 30th November</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Tampa Bay: 12-3</li>
-          <li class="list-group-item">Canadians: 4-11</li>
-          <li class="list-group-item"><a href="<?=BASEURL?>index.php/hockey/classment" class="card-link">Classment</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Tampa Bay @ Canadians</h4>
-        <h6 class="card-subtitle mb-2 text-muted">Thursday, 30th November</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Tampa Bay: 12-3</li>
-          <li class="list-group-item">Canadians: 4-11</li>
-          <li class="list-group-item"><a href="<?=BASEURL?>index.php/hockey/classment" class="card-link">Classment</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Tampa Bay @ Canadians</h4>
-        <h6 class="card-subtitle mb-2 text-muted">Thursday, 30th November</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Tampa Bay: 12-3</li>
-          <li class="list-group-item">Canadians: 4-11</li>
-          <li class="list-group-item"><a href="<?=BASEURL?>index.php/hockey/classment" class="card-link">Classment</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Tampa Bay @ Canadians</h4>
-        <h6 class="card-subtitle mb-2 text-muted">Thursday, 30th November</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Tampa Bay: 12-3</li>
-          <li class="list-group-item">Canadians: 4-11</li>
-          <li class="list-group-item"><a href="<?=BASEURL?>index.php/hockey/classment" class="card-link">Classment</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="card-title">Tampa Bay @ Canadians</h4>
-        <h6 class="card-subtitle mb-2 text-muted">Thursday, 30th November</h6>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Tampa Bay: 12-3</li>
-          <li class="list-group-item">Canadians: 4-11</li>
-          <li class="list-group-item"><a href="<?=BASEURL?>index.php/hockey/classment" class="card-link">Classment</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+	<h3>West Conference</h3>
+	<table class="table table-hover">
+	  <thead class="thead-inverse">
+	    <tr>
+	      <th>#</th>
+	      <th>Team</th>
+	      <th>Points</th>
+	      <th>Game Played</th>
+	      <th>Victory</th>
+	      <th>Lost</th>
+	      <th>Overtime</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <th scope="row">1</th>
+	      <td>Mark</td>
+	      <td>Otto</td>
+	      <td>@mdo</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">2</th>
+	      <td>Jacob</td>
+	      <td>Thornton</td>
+	      <td>@fat</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">3</th>
+	      <td>Larry</td>
+	      <td>the Bird</td>
+	      <td>@twitter</td>
+	    </tr>
+	  </tbody>
+	</table>
+</div>
+
+<div class="row">
+	<h3>East Conference</h3>
+	<table class="table table-hover">
+	  <thead class="thead-inverse">
+	    <tr>
+	      <th>#</th>
+	      <th>Team</th>
+	      <th>Game Played</th>
+	      <th>Victory</th>
+	      <th>Lost</th>
+	      <th>Overtime</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <th scope="row">1</th>
+	      <td>Mark</td>
+	      <td>Otto</td>
+	      <td>@mdo</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">2</th>
+	      <td>Jacob</td>
+	      <td>Thornton</td>
+	      <td>@fat</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">3</th>
+	      <td>Larry</td>
+	      <td>the Bird</td>
+	      <td>@twitter</td>
+	    </tr>
+	  </tbody>
+	</table>
 </div>

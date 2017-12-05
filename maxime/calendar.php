@@ -27,6 +27,42 @@ function getCurlRequest($URL) {
     return $resp;
 }
 
+function getSpecificMatch($ID,$seasonName){
+    $urlRequest="https://api.mysportsfeeds.com/v1.1/pull/nhl/$seasonName/game_boxscore.json?gameid=$ID&teamstats=none&playerstats=none";
+    $resp=getCurlRequest($urlRequest);
+
+    if (!$resp) {
+        //print curl_error($ch);
+        //die('Error: "' . curl_error($ch) . '" - Code: ' . curl_errno($ch));
+    } else {
+        //echo "Response HTTP Status Code : " . curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        //echo "\nResponse HTTP Body : " . $resp;
+        $resp = (array)json_decode($resp);
+        $resp = (array)$resp['gameboxscore'];
+        $score = (array)((array)$resp['periodSummary'])['periodTotals']);
+        $match = (array)$resp['game'];
+        $date = date_create_from_format('Y-m-d', $match['date']);
+        $prettyDate = $date->format("l, jS F Y");
+
+        $homeTeam = ((array)$match['homeTeam'])['Name'];
+        $awayTeam = ((array)$match['awayTeam'])['Name'];
+        echo "<div class=\"col-sm-4\">
+                <div class=\"card\">
+                  <div class=\"card-body\">
+                    <h4 class=\"card-title\">$homeTeam @ $awayTeam </h4>
+                    <h6 class=\"card-subtitle mb-2 text-muted\">$prettyDate</h6>
+                    <ul class=\"list-group list-group-flush\">
+                      <li class=\"list-group-item\">$homeTeam:$score[homeScore]</li>
+                      <li class=\"list-group-item\">$awayTeam:$score[awayScore]</li>
+                      <li class=\"list-group-item\"><a href=\"<?=BASEURL?>index.php/hockey/classment\" class=\"card-link\">Classment</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>";
+    }
+}
+
+
 function getSpecificDate($date, $seasonName){
 
     $dateFormatee=date("Ymd",$date);
@@ -53,15 +89,18 @@ function getSpecificDate($date, $seasonName){
             $gameScore = (array)$gameScore;
             $match = (array)$gameScore["game"];
 
-            $temp_homeTeam = json_decode(json_encode($match['homeTeam']), true);
-            $temp_awayTeam = json_decode(json_encode($match['awayTeam']), true);
-            $homeTeam = $temp_homeTeam['Name'];
-            $awayTeam = $temp_awayTeam['Name'];
+            $homeTeam = ((array)$match['homeTeam'])['Name'];
+            $awayTeam = ((array)$match['awayTeam'])['Name'];
 
             if($gameScore['isCompleted'] == "true"){
                 $homeScore = $gameScore["homeScore"];
                 $awayScore = $gameScore["awayScore"];
-                echo "<div class=\"col-sm-4\">
+            }else{
+                $homeScore = "N/A";
+                $awayScore = "N/A";
+            }
+
+            echo "<div class=\"col-sm-4\">
                 <div class=\"card\">
                   <div class=\"card-body\">
                     <h4 class=\"card-title\">$homeTeam @ $awayTeam </h4>
@@ -69,41 +108,23 @@ function getSpecificDate($date, $seasonName){
                     <ul class=\"list-group list-group-flush\">
                       <li class=\"list-group-item\">$homeTeam:$homeScore</li>
                       <li class=\"list-group-item\">$awayTeam:$awayScore</li>
-                      <li class=\"list-group-item\"><a href=\"<?=BASEURL?>index.php/hockey/standing\" class=\"card-link\">Standing</a></li>
+                      <li class=\"list-group-item\"><a href=\"<?=BASEURL?>index.php/hockey/classment\" class=\"card-link\">Classment</a></li>
                     </ul>
                   </div>
                 </div>
               </div>";
-            }else{
-                $time = $match['time'];
-                
-                echo "<div class=\"col-sm-4\">
-                <div class=\"card\">
-                  <div class=\"card-body\">
-                    <h4 class=\"card-title\">$homeTeam @ $awayTeam </h4>
-                    <h6 class=\"card-subtitle mb-2 text-muted\">$prettyDate</h6>
-                    <ul class=\"list-group list-group-flush\">
-                      <li class=\"list-group-item\">Time : $time East </li>
-                      <li class=\"list-group-item\"><a href=\"<?=BASEURL?>index.php/hockey/standing\" class=\"card-link\">Standing</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>";
-            }
-
-            
 
         }
 
     }
 }
+
+
 function afficherCalendrier($dateDebut =  NULL, $dateFin = NULL )
 {
-    if($dateDebut == NULL){
-        $dateDebut = mktime(0,0,0,date("m"),date("d"),date("Y"));
-    }
-    if($dateFin == NULL){
-        $dateFin = mktime(0,0,0,date("m",$dateDebut),date("d",$dateDebut)+4,date("Y",$dateDebut));
+    if($dateDebut == NULL || $dateFin == NULL){
+        $dateDebut = mktime(0,0,0,date("m"),date("d")-2,date("Y"));
+        $dateFin = mktime(0,0,0,date("m"),date("d")+2,date("Y"));
     }
 
     $anneeDebut = date("Y", $dateDebut);
@@ -122,12 +143,13 @@ function afficherCalendrier($dateDebut =  NULL, $dateFin = NULL )
         //break;
     }
 
-
-
 }
 
-?>
+//afficherCalendrier();
 
+
+
+?>
 
 <div class="row">
     <?= afficherCalendrier(); ?>

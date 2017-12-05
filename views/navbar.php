@@ -21,7 +21,7 @@
             <a class="dropdown-item" href="<?=BASEURL?>index.php/hockey/teams">Teams</a>
           </div>
         </li>
-        <li class="nav-item dropdown">
+       <!--  <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="mlsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             MLS
           </a>
@@ -32,7 +32,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="<?=BASEURL?>index.php/soccer/teams">Teams</a>
           </div>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link dropdown-toggle" href="#" id="nflDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             NFL

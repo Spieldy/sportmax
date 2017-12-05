@@ -69,7 +69,7 @@ function getSpecificDate($date, $seasonName){
                     <ul class=\"list-group list-group-flush\">
                       <li class=\"list-group-item\">$homeTeam:$homeScore</li>
                       <li class=\"list-group-item\">$awayTeam:$awayScore</li>
-                      <li class=\"list-group-item\"><a href=\"<?=BASEURL?>index.php/hockey/standing\" class=\"card-link\">Standing</a></li>
+                      <li class=\"list-group-item\"><a href=\"<?=BASEURL?>index.php/hockey/classment\" class=\"card-link\">Classment</a></li>
                     </ul>
                   </div>
                 </div>
@@ -83,8 +83,8 @@ function getSpecificDate($date, $seasonName){
                     <h4 class=\"card-title\">$homeTeam @ $awayTeam </h4>
                     <h6 class=\"card-subtitle mb-2 text-muted\">$prettyDate</h6>
                     <ul class=\"list-group list-group-flush\">
-                      <li class=\"list-group-item\">Time : $time East </li>
-                      <li class=\"list-group-item\"><a href=\"<?=BASEURL?>index.php/hockey/standing\" class=\"card-link\">Standing</a></li>
+                      <li class=\"list-group-item\">Heure : $time East </li>
+                      <li class=\"list-group-item\"><a href=\"<?=BASEURL?>index.php/hockey/classment\" class=\"card-link\">Classment</a></li>
                     </ul>
                   </div>
                 </div>
@@ -126,8 +126,11 @@ function afficherCalendrier($dateDebut =  NULL, $dateFin = NULL )
 
 }
 
-?>
+//afficherCalendrier();
 
+
+
+?>
 
 <div class="row">
     <?= afficherCalendrier(); ?>
